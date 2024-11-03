@@ -13,7 +13,7 @@ class TemperatureFunction:
     def __init__(self):
 
         # import data set
-        file_path = "weather_data/weather data fixed.csv"
+        file_path = "weather_data/weather data.csv"
         complete_dataset = pd.read_csv(file_path, skiprows=281, low_memory=False)
         self.df = complete_dataset[['ob_time', 'air_temperature']]
         self.df = self.df.drop(self.df.index[-1])
