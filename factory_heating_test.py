@@ -7,8 +7,8 @@ import pandas as pd
 # This script runs several instances of the factory heating problem with different heat settings
 
 # Initialisation of ODE solver
-t_0 = 275
-T = 365
+t_0 = 0
+T = 7
 t_span = (t_0, T)
 y0 = [20]
 t_eval = np.linspace(t_0, T, (T-t_0)*24)
@@ -20,7 +20,7 @@ height_factory = 10
 save_output_to_csv = True
 
 # heater settings
-heater_watts_settings = [14250, 13250, 15250]
+heater_watts_settings = [6500, 5500, 7500]
 #heater_watts_settings = np.linspace(12000, 16000, 20)
 t_on = 1
 t_off = 12

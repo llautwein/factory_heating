@@ -30,8 +30,9 @@ class Visualiser:
         })
 
         plt.figure()
+        fig, ax = plt.subplots()
         for i in range(n):
-            plt.plot(self.solution_functions[i].t, self.solution_functions[i].y[0],
+            ax.plot(self.solution_functions[i].t, self.solution_functions[i].y[0],
                      label=f'{self.heater_settings[i]} W heater')
         plt.grid(True)
         plt.axhline(y=20, color='black', linewidth=3, label='Initial Temperature', alpha=0.7)

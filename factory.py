@@ -16,8 +16,8 @@ class Factory:
         # Insulation, heat energy properties
         self.rho = 1.2041   # density of air at 20°C
         self.c_p = 1012     # specific heat capacity of air at 20°C
-        self.proportionality_celsius_joule = self.rho * self.volume * self.c_p + 3.21e8
-
+        self.proportionality_celsius_joule = self.rho * self.volume * self.c_p + 2.72e8
+        print(self.rho * self.volume * self.c_p)
         # Heat supply rate
         self.t_on = t_on / 24
         self.t_off = t_off / 24
