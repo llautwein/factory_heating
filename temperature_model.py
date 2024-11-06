@@ -25,6 +25,7 @@ class TemperatureFunction:
         # Concatenate `rest_of_data` with `first_100`
         self.df = pd.concat([rest_of_data, shift_part], ignore_index=True)
         self.parameters = self.curve_fit()
+        print(self.parameters)
 
     @staticmethod
     def model_function(t, x_1, x_2, x_3, x_4, x_5):
